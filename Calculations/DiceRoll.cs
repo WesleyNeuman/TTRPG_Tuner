@@ -26,5 +26,10 @@ namespace TTRPG_Tuner.Calculations
             }
             return total;
         }
+
+        public static DiceRoll GetDefault()
+        {
+            return new DiceRoll(1, 6);
+        }
     }
 }

@@ -7,6 +7,11 @@ namespace TTRPG_Tuner.BattleProperties
 {
     public class StatusType
     {
-        
+        public string Name;
+
+        public StatusType()
+        {
+            this.Name = "New Status Type";
+        }
     }
 }

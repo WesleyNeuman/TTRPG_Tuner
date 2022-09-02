@@ -25,3 +25,5 @@ C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\refint\TTRPG_Tuner.dl
 C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\TTRPG_Tuner.pdb
 C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\TTRPG_Tuner.genruntimeconfig.cache
 C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\ref\TTRPG_Tuner.dll
+C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\scopedcss\Pages\BuildEncounter\BuildEncounterPartialClass.razor.rz.scp.css
+C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\scopedcss\Pages\BuildEncounter\EntityCard.razor.rz.scp.css

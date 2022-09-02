@@ -7,6 +7,11 @@ namespace TTRPG_Tuner.BattleProperties
 {
     public class DamageType
     {
-        
+        public string Name;
+
+        public DamageType()
+        {
+            this.Name = "New Damage Type";
+        }
     }
 }

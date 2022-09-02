@@ -10,11 +10,11 @@ namespace TTRPG_Tuner.BattleEntities.Actions
     public class BaseAction
     {
         public string Name;
-        List<BaseActionComponent> ActionComponents;
+        public List<BaseActionComponent> ActionComponents;
 
-        public BaseAction(string name)
+        public BaseAction()
         {
-            this.Name = name;
+            this.Name = "New Action";
             this.ActionComponents = new List<BaseActionComponent>();
         }
     }

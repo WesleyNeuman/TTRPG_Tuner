@@ -1,3 +1,31 @@
+/* _content/TTRPG_Tuner/Pages/BuildEncounter/BuildEncounterPartialClass.razor.rz.scp.css */
+.battle-properties[b-x2e1bgkdpc] {
+    float: left;
+    width: 20%;
+}
+
+.map[b-x2e1bgkdpc] {
+    float: center;
+    height: 400px;
+}
+
+.entities[b-x2e1bgkdpc] {
+    display: flex;
+    width: 100%;
+}
+
+.characters[b-x2e1bgkdpc],
+.enemies[b-x2e1bgkdpc] {
+    flex: 50%;
+}
+/* _content/TTRPG_Tuner/Pages/BuildEncounter/EntityCard.razor.rz.scp.css */
+.entity[b-e9bafqgosn] {
+    border: 1px solid black;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* _content/TTRPG_Tuner/Shared/MainLayout.razor.rz.scp.css */
 .page[b-nlnrl5ocea] {
     position: relative;

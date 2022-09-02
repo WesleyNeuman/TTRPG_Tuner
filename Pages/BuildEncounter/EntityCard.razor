@@ -1,0 +1,32 @@
+﻿@using BattleEntities
+
+<div class="entity">
+    <span class="entity-title">@entity.Name</span>
+    <button class="btn-expander" @onclick="@ToggleExpand">
+        @if (this.isExpanded)
+        {
+            <i class="bi bi-arrows-collapse"></i>
+        }
+        else
+        {
+            <i class="bi bi-arrows-expand"></i>
+        }
+    </button>
+</div>
+
+@code {
+    [Parameter]
+    public BaseEntity entity { get; set; }
+    public bool isExpanded;
+
+    public EntityCard()
+    {
+        entity = new BaseEntity();
+        isExpanded = false;
+    }
+
+    public void ToggleExpand()
+    {
+        this.isExpanded = !this.isExpanded;
+    }
+}

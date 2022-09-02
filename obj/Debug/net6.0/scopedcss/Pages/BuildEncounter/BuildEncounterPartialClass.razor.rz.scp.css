@@ -1,0 +1,19 @@
+.battle-properties[b-x2e1bgkdpc] {
+    float: left;
+    width: 20%;
+}
+
+.map[b-x2e1bgkdpc] {
+    float: center;
+    height: 400px;
+}
+
+.entities[b-x2e1bgkdpc] {
+    display: flex;
+    width: 100%;
+}
+
+.characters[b-x2e1bgkdpc],
+.enemies[b-x2e1bgkdpc] {
+    flex: 50%;
+}

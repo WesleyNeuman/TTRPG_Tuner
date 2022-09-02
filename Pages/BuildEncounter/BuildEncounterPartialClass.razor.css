@@ -1,0 +1,19 @@
+.battle-properties {
+    float: left;
+    width: 20%;
+}
+
+.map {
+    float: center;
+    height: 400px;
+}
+
+.entities {
+    display: flex;
+    width: 100%;
+}
+
+.characters,
+.enemies {
+    flex: 50%;
+}

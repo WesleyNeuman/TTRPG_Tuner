@@ -1,0 +1,42 @@
+﻿@page "/build"
+
+
+<PageTitle>Build a New Encounter</PageTitle>
+
+<h1 style="text-align:center;">Build a New Encounter</h1>
+
+<div class="map">
+    <MapCard />
+</div>
+
+<div class="battle-properties">
+    <div class="damage-types">
+        <ul>
+            @foreach (var item in this._damageTypes)
+            {
+                <li>@item.Name</li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="entities">
+    <div class="characters">
+        @foreach (var character in this._characters)
+        {
+            <EntityCard entity=character/>
+        }
+    </div>
+    <div class="enemies">
+        @foreach (var enemy in this._enemies)
+        {
+            <EntityCard entity=enemy/>
+        }
+    </div>
+</div>
+
+
+
+@code {
+
+}

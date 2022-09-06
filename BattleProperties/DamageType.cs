@@ -8,10 +8,12 @@ namespace TTRPG_Tuner.BattleProperties
     public class DamageType
     {
         public string Name;
+        public bool KnownByEnemies;
 
         public DamageType()
         {
             this.Name = "New Damage Type";
+            this.KnownByEnemies = false;
         }
     }
 }

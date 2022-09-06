@@ -8,10 +8,12 @@ namespace TTRPG_Tuner.BattleProperties
     public class StatusType
     {
         public string Name;
+        public bool KnownByEnemies;
 
         public StatusType()
         {
             this.Name = "New Status Type";
+            this.KnownByEnemies = false;
         }
     }
 }

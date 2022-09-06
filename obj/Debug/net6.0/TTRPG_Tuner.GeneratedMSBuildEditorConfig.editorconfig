@@ -8,65 +8,65 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TTRPG_Tuner
 build_property.RootNamespace = TTRPG_Tuner
-build_property.ProjectDir = C:\Users\wneuman\source\repos\TTRPG_Tuner\
+build_property.ProjectDir = C:\Users\wgeor\source\repos\TTRPG_Tuner\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\wneuman\source\repos\TTRPG_Tuner
+build_property.MSBuildProjectDirectory = C:\Users\wgeor\source\repos\TTRPG_Tuner
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/App.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/BuildEncounter/MapCard.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/BuildEncounter/MapCard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVpbGRFbmNvdW50ZXJcTWFwQ2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/Counter.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/FetchData.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/Index.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Shared/SurveyPrompt.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/_Imports.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/BuildEncounter/BuildEncounterPartialClass.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/BuildEncounter/BuildEncounterPartialClass.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVpbGRFbmNvdW50ZXJcQnVpbGRFbmNvdW50ZXJQYXJ0aWFsQ2xhc3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-x2e1bgkdpc
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/BuildEncounter/EntityCard.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/BuildEncounter/EntityCard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVpbGRFbmNvdW50ZXJcRW50aXR5Q2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-e9bafqgosn
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Shared/MainLayout.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-nlnrl5ocea
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Shared/NavMenu.razor]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zc6b3097e3
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/Error.cshtml]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/_Host.cshtml]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wneuman/source/repos/TTRPG_Tuner/Pages/_Layout.cshtml]
+[C:/Users/wgeor/source/repos/TTRPG_Tuner/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

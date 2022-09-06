@@ -22,6 +22,8 @@ namespace TTRPG_Tuner.BattleEntities
         public List<DamageType> Weaknesses = new List<DamageType>();
         public List<StatusType> StatusImmunities = new List<StatusType>();
 
+        public AiProfile AiProfile = new AiProfile(1, 0, 0, 0, 0);
+
         public BaseEntity()
         {
             this.Name = "New Battle Entity";

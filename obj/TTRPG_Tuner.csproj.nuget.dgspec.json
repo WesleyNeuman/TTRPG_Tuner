@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wneuman\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj": {}
+    "C:\\Users\\wgeor\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wneuman\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj": {
+    "C:\\Users\\wgeor\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wneuman\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj",
+        "projectUniqueName": "C:\\Users\\wgeor\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj",
         "projectName": "TTRPG_Tuner",
-        "projectPath": "C:\\Users\\wneuman\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj",
-        "packagesPath": "C:\\Users\\wneuman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wneuman\\source\\repos\\TTRPG_Tuner\\obj\\",
+        "projectPath": "C:\\Users\\wgeor\\source\\repos\\TTRPG_Tuner\\TTRPG_Tuner.csproj",
+        "packagesPath": "C:\\Users\\wgeor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wgeor\\source\\repos\\TTRPG_Tuner\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\wneuman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wgeor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

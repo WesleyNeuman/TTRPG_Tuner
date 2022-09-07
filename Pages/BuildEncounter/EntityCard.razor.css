@@ -4,6 +4,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
 }
 
 .character-actions {
@@ -12,4 +13,10 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
+}
+
+.btn-expander {
+    font-size: 16px;
+    border: 1px solid black;
 }

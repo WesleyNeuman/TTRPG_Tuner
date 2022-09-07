@@ -56,3 +56,4 @@ C:\Users\wgeor\source\repos\TTRPG_Tuner\obj\Debug\net6.0\refint\TTRPG_Tuner.dll
 C:\Users\wgeor\source\repos\TTRPG_Tuner\obj\Debug\net6.0\TTRPG_Tuner.pdb
 C:\Users\wgeor\source\repos\TTRPG_Tuner\obj\Debug\net6.0\TTRPG_Tuner.genruntimeconfig.cache
 C:\Users\wgeor\source\repos\TTRPG_Tuner\obj\Debug\net6.0\ref\TTRPG_Tuner.dll
+C:\Users\wneuman\source\repos\TTRPG_Tuner\obj\Debug\net6.0\scopedcss\Pages\BuildEncounter\MapCard.razor.rz.scp.css

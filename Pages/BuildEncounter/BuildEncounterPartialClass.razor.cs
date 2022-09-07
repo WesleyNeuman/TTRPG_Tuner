@@ -10,18 +10,18 @@ namespace TTRPG_Tuner.Pages.BuildEncounter
 {
     public partial class BuildEncounterPartialClass
     {
-        public List<BaseEntity> _characters;
-        public List<BaseEntity> _enemies;
-        public List<BaseAction> _actions;
-        public List<DamageType> _damageTypes;
-        public List<StatusType> _statusTypes;
+        public List<BaseEntity> Characters;
+        public List<BaseEntity> Enemies;
+        public List<BaseAction> Actions;
+        public List<DamageType> DamageTypes;
+        public List<StatusType> StatusTypes;
         public BuildEncounterPartialClass()
         {
-            this._damageTypes = this.GetDefaultDamageTypes();
-            this._statusTypes = this.GetDefaultStatusTypes();
-            this._actions = this.GetDefaultActions();
-            this._characters = this.GetDefaultEntities();
-            this._enemies = this.GetDefaultEntities();
+            this.DamageTypes = this.GetDefaultDamageTypes();
+            this.StatusTypes = this.GetDefaultStatusTypes();
+            this.Actions = this.GetDefaultActions();
+            this.Characters = this.GetDefaultEntities();
+            this.Enemies = this.GetDefaultEntities();
         }
 
         public List<StatusType> GetDefaultStatusTypes()
@@ -52,12 +52,12 @@ namespace TTRPG_Tuner.Pages.BuildEncounter
                     Name = "Lacerating Sword",
                     ActionComponents = new List<BaseActionComponent> {
                         new BaseActionComponent {
-                            DamageType = this._damageTypes[0],
+                            DamageType = this.DamageTypes[0],
                             Range = 0,
                             AreaOfAffect = new AreaOfEffect { Size=1, AoeType = AoeType.SingleTile }
                         },
                         new BaseActionComponent {
-                            DamageType = this._damageTypes[1],
+                            DamageType = this.DamageTypes[1],
                             Range = 0,
                             AreaOfAffect = new AreaOfEffect { Size=1, AoeType = AoeType.SingleTile }
                         }

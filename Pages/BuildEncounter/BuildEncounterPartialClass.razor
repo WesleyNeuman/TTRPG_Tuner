@@ -2,47 +2,89 @@
 
 
 <PageTitle>Build a New Encounter</PageTitle>
+<div class="encounter">
+    <div class="side-column">
+        <h1>Placeholder</h1>
 
-<h1 style="text-align:center;">Build a New Encounter</h1>
+        <div class="battle-properties">
+            <div class="actions">
+                <span class="property-header">Actions</span>
+                <button class="button btn-add-property" @onclick="DoNothing">
+                    <i class="bi bi-plus"></i>
+                </button>
+                <ul>
+                    @foreach (var item in this.Actions)
+                    {
+                        <li>@item.Name</li>
+                    }
+                </ul>
+            </div>
 
-<div class="map">
-    <MapCard />
-</div>
+            <div class="damage-types">
+                <span class="property-header">Damage Types</span>
+                <button class="button btn-add-property" @onclick="DoNothing">
+                    <i class="bi bi-plus"></i>
+                </button>
+                <ul>
+                    @foreach (var item in this.DamageTypes)
+                    {
+                        <li>@item.Name</li>
+                    }
+                </ul>
+            </div>
 
-<div class="battle-properties">
-    <div class="damage-types">
-        <ul>
-            @foreach (var item in this._damageTypes)
-            {
-                <li>@item.Name</li>
-            }
-        </ul>
+            <div class="status-types">
+                <span class="property-header">Status Types</span>
+                <button class="button btn-add-property" @onclick="DoNothing">
+                    <i class="bi bi-plus"></i>
+                </button>
+                <ul>
+                    @foreach (var item in this.StatusTypes)
+                    {
+                        <li>@item.Name</li>
+                    }
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="entities">
-    <div class="characters">
-        @foreach (var character in this._characters)
-        {
-            <EntityCard entity=character/>
-        }
-        <button class="button">
-            <i class="bi bi-plus-circle"></i>
-        </button>
-    </div>
-    <div class="enemies">
-        @foreach (var enemy in this._enemies)
-        {
-            <EntityCard entity=enemy/>
-        }
-        <button class="button">
-            <i class="bi bi-plus-circle"></i>
-        </button>
+    <div class="main-column">
+        <h1>Build a New Encounter</h1>
+
+        <div class="entities">
+            <div class="characters">
+                <h5 class="entity-title">Player Characters</h5>
+                @foreach (var character in this.Characters)
+                {
+                    <EntityCard entity=character/>
+                }
+                <button class="button">
+                    <i class="bi bi-plus-circle"></i>
+                </button>
+            </div>
+            <div class="enemies">
+                <h5 class="entity-title">Enemies</h5>
+                @foreach (var enemy in this.Enemies)
+                {
+                    <EntityCard entity=enemy/>
+                }
+                <button class="button">
+                    <i class="bi bi-plus-circle"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="map">
+            <MapCard />
+        </div>
     </div>
 </div>
 
 
 
 @code {
+    void DoNothing() 
+    {
 
+    }
 }

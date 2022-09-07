@@ -1,5 +1,6 @@
 ﻿@using BattleEntities
 @using BattleEntities.Actions
+@using Pages.Modals
 
 <div class="entity">
     <span class="entity-title">@entity.Name</span>
@@ -35,7 +36,7 @@
             <div class="character-actions">
                 <span>Actions</span>
                 <button class="btn-add">
-                    <i class="bi bi-plus-circle" @onclick="@OpenActionAddingModal"></i>
+                    <i class="bi bi-plus-circle"></i>
                 </button>
                 @foreach (var action in entity.Actions)
                 {
@@ -62,40 +63,21 @@
             
         }
     </div>
-
-    <AddActionToEntityModal entitySender="AddActionToEntity" @ref="addActionModal"></AddActionToEntityModal>
 </div>
 
 @code {
     [Parameter] public BaseEntity entity { get; set; }
     public bool isExpanded;
 
-    private AddActionToEntityModal addActionModal { get; set; }
-    private BaseAction actionToAdd;
-
     public EntityCard()
     {
         entity = new BaseEntity();
         isExpanded = false;
-
-        addActionModal = new AddActionToEntityModal();
-        actionToAdd = new BaseAction();
     }
 
     public void ToggleExpand()
     {
         this.isExpanded = !this.isExpanded;
-    }
-
-    protected void OpenActionAddingModal()
-    {
-        addActionModal.Open();
-    }
-
-    void AddActionToEntity(BaseAction action)
-    {
-        this.entity.Actions.Add(action);
-        this.addActionModal.Cancel();
     }
 
     protected void OnRemoveActionFromEntity(BaseEntity entity, BaseAction action)

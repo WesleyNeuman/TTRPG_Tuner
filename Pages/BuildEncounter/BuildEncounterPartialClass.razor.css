@@ -1,4 +1,5 @@
 .battle-properties {
+    display: flex;
     float: left;
     width: 20%;
 }
@@ -13,7 +14,16 @@
     width: 100%;
 }
 
-.characters,
+.characters {
+    flex: 50%;
+    border: 1px solid black;
+    margin-left: 15%;
+    margin-right: 5px;
+}
+
 .enemies {
     flex: 50%;
+    border: 1px solid black;
+    margin-left: 5px;
+    margin-right: 15%;
 }

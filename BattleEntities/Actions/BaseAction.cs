@@ -21,6 +21,7 @@ namespace TTRPG_Tuner.BattleEntities.Actions
 
     public class BaseActionComponent
     {
+        public string Label = "Base Action Component";
         public DiceRoll Value = DiceRoll.GetDefault();
         public DamageType DamageType = new DamageType();
         public int Save;
@@ -36,6 +37,11 @@ namespace TTRPG_Tuner.BattleEntities.Actions
 
     public class Attack : BaseActionComponent
     {
+        public Attack()
+        {
+            this.Label = "Attack";
+        }
+
         public override void Affect(BaseEntity entity)
         {
             int damage = this.Value.Roll();
@@ -45,6 +51,11 @@ namespace TTRPG_Tuner.BattleEntities.Actions
 
     public class Healing : BaseActionComponent
     {
+        public Healing()
+        {
+            this.Label = "Healing";
+        }
+        
         public override void Affect(BaseEntity entity)
         {
             int healing = this.Value.Roll();

@@ -1,4 +1,5 @@
 ﻿@using BattleEntities
+@using BattleEntities.Actions
 
 <div class="entity">
     <span class="entity-title">@entity.Name</span>
@@ -12,21 +13,93 @@
             <i class="bi bi-arrows-expand"></i>
         }
     </button>
+
+    <div class="entity-details">
+        @if (this.isExpanded)
+        {
+            <EditForm Model="@entity">
+                <p>
+                    <label>
+                        Name:
+                        <InputText @bind-Value="entity.Name" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Max Health:
+                        <InputNumber @bind-Value="entity.MaxHp"></InputNumber>
+                    </label>
+                </p>
+            </EditForm>
+
+            <div class="character-actions">
+                <span>Actions</span>
+                <button class="btn-add">
+                    <i class="bi bi-plus-circle" @onclick="@OpenActionAddingModal"></i>
+                </button>
+                @foreach (var action in entity.Actions)
+                {
+                    <div class="action">
+                        <span class="action-title">@action.Name</span>
+                        <button class="btn-remove" @onclick="() => OnRemoveActionFromEntity(entity, action)">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </div>
+                }
+            </div>
+            
+            <div class="character-weaknesses">
+                
+            </div>
+
+            <div class="character-resistances">
+
+            </div>
+
+            <div class="character-immunities">
+
+            </div>
+            
+        }
+    </div>
+
+    <AddActionToEntityModal entitySender="AddActionToEntity" @ref="addActionModal"></AddActionToEntityModal>
 </div>
 
 @code {
-    [Parameter]
-    public BaseEntity entity { get; set; }
+    [Parameter] public BaseEntity entity { get; set; }
     public bool isExpanded;
+
+    private AddActionToEntityModal addActionModal { get; set; }
+    private BaseAction actionToAdd;
 
     public EntityCard()
     {
         entity = new BaseEntity();
         isExpanded = false;
+
+        addActionModal = new AddActionToEntityModal();
+        actionToAdd = new BaseAction();
     }
 
     public void ToggleExpand()
     {
         this.isExpanded = !this.isExpanded;
+    }
+
+    protected void OpenActionAddingModal()
+    {
+        addActionModal.Open();
+    }
+
+    void AddActionToEntity(BaseAction action)
+    {
+        this.entity.Actions.Add(action);
+        this.addActionModal.Cancel();
+    }
+
+    protected void OnRemoveActionFromEntity(BaseEntity entity, BaseAction action)
+    {
+        entity.Actions.Remove(action);
     }
 }

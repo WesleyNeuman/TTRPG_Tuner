@@ -10,8 +10,8 @@ namespace TTRPG_Tuner.BattleEntities
     public class BaseEntity
     {
         public string Name;
-        public int MaxHp { get; set; }
-        public int CurrentHp { get; set; }
+        public Dictionary<string, int> NormalStats;
+        public Dictionary<string, int> CurrentStats;
         public DeathState DeathState;
         public int DeathSaves = 0;
         public List<StatusType> CurrentStatuses = new List<StatusType>();
@@ -27,6 +27,8 @@ namespace TTRPG_Tuner.BattleEntities
         public BaseEntity()
         {
             this.Name = "New Battle Entity";
+            this.NormalStats = new Dictionary<string, int> { {"HP", 10} };
+            this.CurrentStats = this.NormalStats;
         }
 
         public int TakeDamage(int damage, DamageType damageType)
@@ -45,15 +47,15 @@ namespace TTRPG_Tuner.BattleEntities
                 damage = damage * 2;
             }
 
-            this.CurrentHp = this.CurrentHp - damage;
+            this.CurrentStats["HP"] = this.CurrentStats["HP"] - damage;
             this.CheckDying();
             return damage;
         }
 
         public int ReceiveHealing(int healing)
         {
-            this.CurrentHp = this.CurrentHp + healing;
-            this.CurrentHp = this.CurrentHp > this.MaxHp ? this.MaxHp : this.CurrentHp;
+            this.CurrentStats["HP"] = this.CurrentStats["HP"] + healing;
+            this.CurrentStats["HP"] = this.CurrentStats["HP"] > this.NormalStats["HP"] ? this.NormalStats["HP"] : this.CurrentStats["HP"];
             
             this.CheckDying();
             return healing;
@@ -74,12 +76,12 @@ namespace TTRPG_Tuner.BattleEntities
 
         private void CheckDying()
         {
-            if (this.CurrentHp > 0)
+            if (this.CurrentStats["HP"] > 0)
             {
                 this.DeathState = DeathState.Alive;
                 this.DeathSaves = 0;
             }
-            else if (this.CurrentHp < 0 && this.DeathState == DeathState.Alive)
+            else if (this.CurrentStats["HP"] < 0 && this.DeathState == DeathState.Alive)
             {
                 this.DeathState = DeathState.Dying;
                 this.DeathSaves = 0;
@@ -91,11 +93,11 @@ namespace TTRPG_Tuner.BattleEntities
 
             if (this.DeathState == DeathState.Dying && this.DeathSaves >= 3)
             {
-                this.CurrentHp = 1;
+                this.CurrentStats["HP"] = 1;
                 this.DeathState = DeathState.Alive;
             }
             else if ((this.DeathState == DeathState.Dying && this.DeathSaves <= -3)
-                    || this.CurrentHp == this.MaxHp*-1)
+                    || this.CurrentStats["HP"] == this.NormalStats["HP"]*-1)
             {
                 this.DeathState = DeathState.Dead;
             }

@@ -1,4 +1,9 @@
-﻿@page "/build"
+﻿@using BattleEntities.Actions
+@using BattleProperties
+@using BattleEntities
+@using TTRPG_Tuner.Pages.BuildEncounter.DisplayLists
+
+@page "/build"
 
 
 <PageTitle>Build a New Encounter</PageTitle>
@@ -7,22 +12,11 @@
         <h1>Placeholder</h1>
 
         <div class="battle-properties">
-            <div class="actions">
-                <span class="property-header">Actions</span>
-                <button class="button btn-add-property" @onclick="DoNothing">
-                    <i class="bi bi-plus"></i>
-                </button>
-                <ul>
-                    @foreach (var item in this.Actions)
-                    {
-                        <li>@item.Name</li>
-                    }
-                </ul>
-            </div>
+            <ActionList Actions=this.Actions/>
 
             <div class="damage-types">
                 <span class="property-header">Damage Types</span>
-                <button class="button btn-add-property" @onclick="DoNothing">
+                <button class="button btn-add-property" @onclick="AddNewDamageType">
                     <i class="bi bi-plus"></i>
                 </button>
                 <ul>
@@ -35,7 +29,7 @@
 
             <div class="status-types">
                 <span class="property-header">Status Types</span>
-                <button class="button btn-add-property" @onclick="DoNothing">
+                <button class="button btn-add-property" @onclick="AddNewStatusType">
                     <i class="bi bi-plus"></i>
                 </button>
                 <ul>
@@ -86,5 +80,30 @@
     void DoNothing() 
     {
 
+    }
+
+    void AddNewAction()
+    {
+        this.Actions.Add(new BaseAction());
+    }
+
+    void OnDeleteAction(BaseAction action)
+    {
+        this.Actions.Remove(action);
+    }
+
+    void OnDuplicateAction(BaseAction action)
+    {
+        this.Actions.Add(action);
+    }
+
+    void AddNewDamageType()
+    {
+        this.DamageTypes.Add(new DamageType());
+    }
+
+    void AddNewStatusType()
+    {
+        this.StatusTypes.Add(new StatusType());
     }
 }

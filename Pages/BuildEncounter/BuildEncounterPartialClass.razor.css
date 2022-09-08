@@ -6,7 +6,9 @@
 .side-column {
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: 20%;
+    resize: horizontal;
+    overflow: auto;
 }
 
 .battle-properties {
@@ -18,10 +20,16 @@
     padding: 5px;
 }
 
+.property-header {
+    font-weight: bold;
+}
+
 .main-column {
     text-align: center;
     flex-direction: column;
-    width: 85%;
+    width: 80%;
+    resize: horizontal;
+    overflow: auto;
 }
 
 .map {

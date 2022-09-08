@@ -1,0 +1,78 @@
+@using BattleEntities.Actions
+
+<div class="action-list">
+    <span class="property-header">Actions</span>
+    <button class="button btn-add-property" @onclick="AddNewAction">
+        <i class="bi bi-plus"></i>
+    </button>
+
+    <ul style="list-style: none;">
+        <li>
+            @foreach (var item in this.Actions)
+            {
+                <li>
+                    @if (!this.IsExpanded)
+                    {
+                        <span>@item.Name</span>
+                    }
+                    <button class="button btn-remove" @onclick="() => DeleteAction(item)">
+                        <i class="bi bi-x"></i>
+                    </button>
+                    <button class="button btn-duplicate" @onclick="() => DuplicateAction(item)">
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                    <button class="button btn-expander" @onclick="ToggleExpand">
+                        @if (this.IsExpanded)
+                        {
+                            <i class="bi bi-arrows-collapse"></i>
+                        }
+                        else
+                        {
+                            <i class="bi bi-arrows-expand"></i>
+                        }
+                    </button>
+
+                    @if (this.IsExpanded)
+                    {
+                        <EditForm Model=@item>
+                            <InputText @bind-Value="item.Name"></InputText>
+                        </EditForm>
+                    }
+                </li>
+            }
+        </li>
+    </ul>
+</div>
+
+
+
+@code {
+    [Parameter] public List<BaseAction> Actions { get; set; }
+    private bool IsExpanded { get; set; }
+
+    public ActionList() 
+    {
+        this.Actions = new List<BaseAction>();
+        this.IsExpanded = false;
+    }
+
+    protected void ToggleExpand()
+    {
+        this.IsExpanded = !this.IsExpanded;
+    }
+
+    protected void AddNewAction()
+    {
+        this.Actions.Add(new BaseAction());
+    }
+
+    protected void DeleteAction(BaseAction action)
+    {
+        this.Actions.Remove(action);
+    }
+
+    protected void DuplicateAction(BaseAction action)
+    {
+        this.Actions.Add(action);
+    }
+}

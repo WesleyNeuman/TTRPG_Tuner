@@ -6,25 +6,18 @@ using TTRPG_Tuner.BattleEntities;
 using TTRPG_Tuner.BattleEntities.Actions;
 using TTRPG_Tuner.BattleProperties;
 
-namespace TTRPG_Tuner.Pages.BuildEncounter
+namespace TTRPG_Tuner
 {
-    public partial class BuildEncounterPartialClass
+    public static class Defaults
     {
-        public List<BaseEntity> Characters;
-        public List<BaseEntity> Enemies;
-        public List<BaseAction> Actions;
-        public List<DamageType> DamageTypes;
-        public List<StatusType> StatusTypes;
-        public BuildEncounterPartialClass()
+        public static Dictionary<string, int> GetDefaultStats()
         {
-            this.DamageTypes = this.GetDefaultDamageTypes();
-            this.StatusTypes = this.GetDefaultStatusTypes();
-            this.Actions = this.GetDefaultActions();
-            this.Characters = this.GetDefaultEntities();
-            this.Enemies = this.GetDefaultEntities();
+            return new Dictionary<string, int> {
+                { "HP", 10 }
+            };
         }
 
-        public List<StatusType> GetDefaultStatusTypes()
+        public static List<StatusType> GetDefaultStatusTypes()
         {
             return new List<StatusType> {
                 new StatusType {
@@ -33,7 +26,7 @@ namespace TTRPG_Tuner.Pages.BuildEncounter
             };
         }
 
-        public List<DamageType> GetDefaultDamageTypes()
+        public static List<DamageType> GetDefaultDamageTypes()
         {
             return new List<DamageType> {
                 new DamageType {
@@ -45,19 +38,19 @@ namespace TTRPG_Tuner.Pages.BuildEncounter
             };
         }
 
-        public List<BaseAction> GetDefaultActions()
+        public static List<BaseAction> GetDefaultActions()
         {
             return new List<BaseAction> {
                 new BaseAction {
                     Name = "Lacerating Sword",
                     ActionComponents = new List<BaseActionComponent> {
                         new BaseActionComponent {
-                            DamageType = this.DamageTypes[0],
+                            DamageType = GetDefaultDamageTypes()[0],
                             Range = 0,
                             AreaOfAffect = new AreaOfEffect { Size=1, AoeType = AoeType.SingleTile }
                         },
                         new BaseActionComponent {
-                            DamageType = this.DamageTypes[1],
+                            DamageType = GetDefaultDamageTypes()[1],
                             Range = 0,
                             AreaOfAffect = new AreaOfEffect { Size=1, AoeType = AoeType.SingleTile }
                         }
@@ -66,7 +59,7 @@ namespace TTRPG_Tuner.Pages.BuildEncounter
             };
         }
 
-        public List<BaseEntity> GetDefaultEntities()
+        public static List<BaseEntity> GetDefaultEntities()
         {
             return new List<BaseEntity> {
                 new BaseEntity {
